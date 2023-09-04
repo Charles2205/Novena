@@ -11,3 +11,5 @@ app.get('/services',services)
 app.get('/doctors',doctors)
 app.get('/blog',blog)
 
+
+module.exports= app
