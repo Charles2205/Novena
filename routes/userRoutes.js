@@ -1,31 +1,13 @@
-const home=(req,res)=>{
-    res.render('')
-}
-const about=(req,res)=>{
-    res.render('')
-}
-const services=(req,res)=>{
-    res.render('')
-}
-const department=(req,res)=>{
-    res.render('')
-}
-const doctors=(req,res)=>{
-    res.render('')
-}
-const blog=(req,res)=>{
-    res.render('')
-}
-const contact =(req,res)=>{
-    res.render('')
-}
+const express = require('express')
+const {home,contact,department,services,doctors,blog,about} = require('../controllers/userController')
 
-module.exports={
-    home,
-    about,
-    contact,
-    services,
-    doctors,
-    blog,
-    department,
-}
+
+const app = express.Router()
+app.get('/',home)
+app.get('/about',about)
+app.get('/contact',contact)
+app.get('/department',department)
+app.get('/services',services)
+app.get('/doctors',doctors)
+app.get('/blog',blog)
+

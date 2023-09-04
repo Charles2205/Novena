@@ -12,7 +12,9 @@ const port = process.env.PORT || 4301
 
 const app = express()
 
-
+app.set('view engine','ejs')
+app.set('views',__dirname+'/views/pages')
+app.set('layout',__dirname+'/views/layout')
 
 app.set('view engine','ejs')
 
@@ -27,7 +29,7 @@ app.use('/',blogRoute)
 
 const startServer=async()=>{
     try{
-        await sequel.authenticate()
+        // await sequel.authenticate()
         app.listen(port,()=>{
             console.log(`Server is running on http://localhost:${port}`)
         });
