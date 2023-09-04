@@ -2,30 +2,38 @@ const home=(req,res)=>{
     res.render('home')
 }
 const about=(req,res)=>{
-    res.render('')
+    res.render('about')
 }
-const services=(req,res)=>{
-    res.render('')
+const service=(req,res)=>{
+    res.render('service')
 }
 const department=(req,res)=>{
-    res.render('')
+    res.render('department')
 }
-const doctors=(req,res)=>{
-    res.render('')
+const departmentSingle=(req,res)=>{
+    res.render('department-single')
+}
+const doctor=(req,res)=>{
+    res.render('doctor')
 }
 const blog=(req,res)=>{
-    res.render('')
+    res.render('blog')
 }
 const contact =(req,res)=>{
-    res.render('')
+    res.render('contact')
+}
+const doctorSingle=(req,res)=>{
+    res.render('doctor-single')
 }
 
 module.exports={
     home,
     about,
     contact,
-    services,
-    doctors,
+    service,
+    doctor,
     blog,
     department,
+    departmentSingle,
+    doctorSingle
 }

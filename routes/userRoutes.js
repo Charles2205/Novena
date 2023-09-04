@@ -1,5 +1,5 @@
 const express = require('express')
-const {home,contact,department,services,doctors,blog,about} = require('../controllers/userController')
+const {home,contact,department,service,doctor,blog,about,departmentSingle,doctorSingle} = require('../controllers/userController')
 
 
 const app = express.Router()
@@ -7,8 +7,10 @@ app.get('/',home)
 app.get('/about',about)
 app.get('/contact',contact)
 app.get('/department',department)
-app.get('/services',services)
-app.get('/doctors',doctors)
+app.get('/department-single',departmentSingle)
+app.get('/doctor-single',doctorSingle)
+app.get('/service',service)
+app.get('/doctor',doctor)
 app.get('/blog',blog)
 
 
