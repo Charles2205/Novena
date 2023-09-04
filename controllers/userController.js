@@ -25,6 +25,19 @@ const contact =(req,res)=>{
 const doctorSingle=(req,res)=>{
     res.render('doctor-single')
 }
+const appointment=(req,res)=>{
+    res.render('appointment')
+}
+const blogSideBar=(req,res)=>{
+    res.render('blog-sidebar')
+}
+const blogSingle=(req,res)=>{
+    res.render('blog-single')
+}
+const confirmation=(req,res)=>{
+    res.render('confirmation')
+}
+
 
 module.exports={
     home,
@@ -35,5 +48,10 @@ module.exports={
     blog,
     department,
     departmentSingle,
-    doctorSingle
+    doctorSingle,
+    appointment,
+    blogSideBar,
+    blogSingle,
+    confirmation,
+    
 }
