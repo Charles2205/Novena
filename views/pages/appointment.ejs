@@ -35,7 +35,7 @@
              <div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
               <h2 class="mb-2 title-color">Book an appoinment</h2>
               <p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
-                 <form id="#" class="appoinment-form" method="post" action="#">
+                 <form action="/appointment" method="post"  id="#" class="appoinment-form" >
                       <div class="row">
                            <div class="col-lg-6">
                               <div class="form-group">
@@ -85,7 +85,7 @@
   
                           <div class="col-lg-6">
                               <div class="form-group">
-                                  <input name="phone" id="phone" type="Number" class="form-control" placeholder="Phone Number">
+                                  <input name="phone" id="phone" type="text" class="form-control" placeholder="Phone Number">
                               </div>
                           </div>
                       </div>
@@ -93,7 +93,7 @@
                           <textarea name="message" id="message" class="form-control" rows="6" placeholder="Your Message"></textarea>
                       </div>
   
-                      <a class="btn btn-main btn-round-full" href="/confirmation">Make Appoinment<i class="icofont-simple-right ml-2"></i></a>
+                      <button class="btn btn-main btn-round-full" type="submit">Make Appoinment<i class="icofont-simple-right ml-2"></i></button>
                   </form>
               </div>
           </div>

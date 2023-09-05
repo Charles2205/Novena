@@ -1,3 +1,5 @@
+const appointments = require('../database/models/appointments')
+
 const home=(req,res)=>{
     res.render('home')
 }
@@ -37,7 +39,12 @@ const blogSingle=(req,res)=>{
 const confirmation=(req,res)=>{
     res.render('confirmation')
 }
-
+const bookAppointments=async(req,res)=>{
+    const {department,doctors,fullName,message,phoneNumber,date} = req.body
+    await appointments.create({department,doctors,fullName,message,phoneNumber,date})
+    res.redirect('/confirmation')
+    
+}
 
 module.exports={
     home,
@@ -53,5 +60,6 @@ module.exports={
     blogSideBar,
     blogSingle,
     confirmation,
+    bookAppointments,
     
 }
