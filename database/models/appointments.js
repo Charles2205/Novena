@@ -25,8 +25,11 @@ message:{
 date:{
     type:DataTypes.DATEONLY,
     allowNull:true
+},
+time:{
+    type:DataTypes.TIME
 }
 })
 
-Appointments.sync({force:true})
+Appointments.sync()
 module.exports= Appointments

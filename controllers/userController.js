@@ -40,8 +40,8 @@ const confirmation=(req,res)=>{
     res.render('confirmation')
 }
 const bookAppointments=async(req,res)=>{
-    const {department,doctors,fullName,message,phoneNumber,date} = req.body
-    await appointments.create({department,doctors,fullName,message,phoneNumber,date})
+    const {department,doctors,fullName,message,phoneNumber,date,time} = req.body
+    await appointments.create({department,doctors,fullName,message,phoneNumber,date,time})
     res.redirect('/confirmation')
     
 }
